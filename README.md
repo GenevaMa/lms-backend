@@ -1,53 +1,67 @@
-![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![Zod](https://img.shields.io/badge/zod-%233068b7?=for-the-badge&logo=zod&logoColor=white) ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?=for-the-badge&logo=nodemon&logoColor=%BBDEAD) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white) ![Mongoose](https://img.shields.io/badge/Mongoose-880000?logo=mongoose&logoColor=white)
 
-# LMS Frontend
+# LMS Backend
 
-A clean and modern frontend for a Learning Management System (LMS), built with React and Vite.
-Designed to deliver a responsive interface, modular components, and an intuitive learning experience.
-This project is part of a full-stack MERN architecture, integrating MongoDB, Express.js, React, and Node.js.
-
----
-
-## Preview
-
-<p align="center">
-  <img src="/public/assets/images/preview/image%209.png" width="45%" />
-  <img src="/public/assets/images/preview/image%2011.png" width="45%" />
-</p>
-
-<p align="center">
-  <img src="/public/assets/images/preview/image%2010.png" width="45%" />
-  <img src="/public/assets/images/preview/image%207.png" width="45%" />
-</p>
-
-<p align="center">
-  <img src="/public/assets/images/preview/image%208.png" width="45%" />
-</p>
+A backend service for a Learning Management System (LMS) built using Node.js, Express, and MongoDB.  
+It provides structured APIs for managing courses, users, authentication, and learning workflows, ensuring reliable data processing and smooth integration with the frontend.
 
 ---
+
+## API Preview
+
+Below is an overview of the main API groups included in this service:
+
+```md
+/auth
+POST /signin → Sign in user
+POST /payment → Handle payment
+
+/courses
+POST / → Create course
+POST /upload → Upload course
+GET /overview → Get course overview
+GET /students → Get students enrolled in all courses
+
+/students
+GET / → Get all students
+GET /detail → Get student detail
+GET /by-course/:courseId → Get students by course ID
+POST / → Create new student
+PUT / → Update student
+DELETE / → Delete student
+
+/course-students
+POST / → Add student to a course
+PUT / → Remove student from a course
+```
 
 ## Tech Stack
 
-- React
-- Vite
-- TailwindCSS
-- JavaScript (ES6+)
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Token (JWT)
+- bcrypt (password hashing)
 
-## Development Tools
+Development Tools
 
 - Git & GitHub
-- Visual Studio Code
 - Postman
-- Figma
+- Visual Studio Code
+- MongoDB Compass / Atlas
 
 ## Features
 
-- Modern and responsive UI
-- Course browsing and detailed views
-- Student/instructor dashboard
-- Structured learning workflow
-- Modular and reusable components
-- Fast development setup with Vite
+- RESTful API architecture
+- User authentication with JWT
+- Role-ready structure (student, instructor, admin)
+- Course and module management
+- Enrollment and progress tracking
+- Secure password hashing
+- Field validation & error handling
+- Environment variable–based configuration
+- Scalable folder structure (controllers, routes, models, middleware)
 
 ## Live Demo
 
@@ -59,15 +73,16 @@ Coming soon
 
 - Node.js 18+
 - npm 8+ or pnpm 7+
+  MongoDB local or MongoDB Atlas URI
 
 ## Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/lms-frontend.git
+git clone https://github.com/your-username/lms-backend.git
 
 # Navigate into the folder
-cd lms-frontend
+cd lms-backend
 
 # Install dependencies
 npm install
@@ -76,40 +91,58 @@ npm install
 npm run dev
 ```
 
+## Envirovment Variables
+
+create a .env file in the root directory :
+
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+## Running Server
+
+```bash
+npm run dev # Start development server with nodemon
+npm start # Start production server
+```
+
 ## Project Structures
 
 ```bash
-lms-frontend/
+lms-backend/
 │
 ├── src/
-│   ├── components/        # Reusable UI components
-│   ├── pages/             # Main pages
-│   ├── layouts/           # Layout wrappers (dashboard, etc)
-│   ├── routes/            # App routing
-│   ├── assets/            # Images, icons, static assets
-│   └── main.jsx           # Application entry point
+│   ├── config/            # Database configuration & app setup
+│   ├── controllers/       # Request handler logic
+│   ├── middleware/        # Auth and error-handling middleware
+│   ├── models/            # Mongoose schemas & models
+│   ├── routes/            # All API route definitions
+│   ├── utils/             # Helpers (tokens, validators, etc)
+│   └── server.js          # Server entry point
 │
-├── public/
 ├── package.json
-└── vite.config.js
+├── .env.example
+└── README.md
 ```
 
 ## Scripts
 
 ```bash
-npm run dev       # Start development server
-npm run build     # Build for production
-npm run preview   # Preview the production build locally
+npm run dev     # Start development server
+npm start       # Start production server
 ```
 
 ## Roadmap (Planned Improvements)
 
-- Add role-based authentication (student/instructor/admin)
-- Course enrollment flow
-- Quiz and assignment pages
-- User profile management
-- API integration with backend service
-- UI polish and accessibility improvements
+- Add full role-based access control (student/instructor/admin)
+- Add course recommendation engine
+- Add assignment & quiz endpoints
+- Add progress analytics
+- Add refresh tokens & session management
+- Add Swagger/OpenAPI documentation
+- Add request rate limiting and improved security
 
 ## Contributing
 
