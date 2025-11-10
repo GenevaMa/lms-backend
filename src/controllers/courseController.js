@@ -357,13 +357,16 @@ export const getStudentsByCourseId = async (req, res) => {
   try {
     const { id } = req.params;
 
+    // ambil course dan populate students (select field photo)
     const course = await courseModel.findById(id).select("name").populate({
       path: "students",
-      select: "name email photo"
+      select: "name email photo" // ambil field photo dari user
     });
 
+    // base url untuk foto siswa
     const photoBaseUrl = (process.env.APP_URL || "") + "/uploads/students/";
 
+    // map students -> tambahkan photo_url (consisten dengan endpoint /students)
     const students = (course?.students || []).map((item) => {
       const obj = item.toObject();
       return {
@@ -372,11 +375,12 @@ export const getStudentsByCourseId = async (req, res) => {
       };
     });
 
+    // kembalikan data dengan key 'students' (bukan 'student') untuk konsistensi
     return res.json({
       message: "Get student by course success",
       data: {
         ...course.toObject(),
-        students
+        students // key konsisten
       }
     });
   } catch (error) {
