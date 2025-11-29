@@ -81,7 +81,7 @@ export const postStudent = async (req, res) => {
       name: parse.data.name,
       email: parse.data.email,
       password: hashPassword,
-      photo: req.file?.filename, //
+      photo: req.file?.filename,
       manager: req.user._id,
       role: "student"
     });
